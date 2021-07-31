@@ -1,15 +1,12 @@
 package ui_automation.utilities;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
 public class ConfigurationReader {
     private static Properties properties;
-
-    static {
+    public static String getProperty(String fileName, String key) {
         try {
-            String path = "src/test/resources/ui-config.properties";
+            String path = "src/test/resources/"+ fileName;
             FileInputStream stream = new FileInputStream(path);
             properties = new Properties();
             properties.load(stream);
@@ -17,7 +14,5 @@ public class ConfigurationReader {
         }catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public static String getProperty(String key) { return properties.getProperty(key); }
+        return properties.getProperty(key); }
 }
