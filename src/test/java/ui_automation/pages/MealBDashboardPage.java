@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import ui_automation.utilities.Driver;
 
+import java.util.List;
+
 public class MealBDashboardPage {
     WebDriver driver;
 
@@ -18,6 +20,7 @@ public class MealBDashboardPage {
 
     @FindBy(id = "HeaderCurrentUserName")
     public WebElement currentUserFullName;
+
 
 
 

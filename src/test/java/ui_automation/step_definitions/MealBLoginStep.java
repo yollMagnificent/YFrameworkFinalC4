@@ -57,14 +57,11 @@ public class MealBLoginStep {
     @When("I loggin with username as {string} and password as {string}")
     public void i_loggin_with_username_as_and_password_as(String userName, String password) {
         mealBLoginPage.login(userName, password);
-
     }
 
     @Then("I should see error message as {string}")
     public void i_should_see_error_message_as(String errorMg) {
         Assert.assertEquals(mealBLoginPage.invalidMsgs.get(0).getText(), errorMg);
-
-
     }
 
 
