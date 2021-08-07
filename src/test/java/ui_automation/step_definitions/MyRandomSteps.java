@@ -141,6 +141,33 @@ public class MyRandomSteps {
 
 
 
+    @Given("I navigate to the Ajax! webpage")
+    public void i_navigate_to_the_Ajax_webpage() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("ui-config.properties", "myurl3.url"));
+        Driver.getDriver().manage().window().maximize();
+        String webPageTitle = Driver.getDriver().getTitle();
+        System.out.println("The title of webpage is:::::::" + webPageTitle);
+
+    }
+
+    @When("I click on load link")
+    public void i_click_on_load_link() {
+        myRandomPage.ajaxLink.click();
+
+
+    }
+
+    @When("I verify result message {string}")
+    public void i_verify_result_message(String resultMsg) {
+        wait.until(ExpectedConditions.visibilityOf(myRandomPage.resultMsg));
+        Assert.assertEquals(myRandomPage.resultMsg.getText(), resultMsg);
+
+    }
+
+
+
+
+
 
 
 

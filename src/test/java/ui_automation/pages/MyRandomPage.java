@@ -48,6 +48,14 @@ public class MyRandomPage {
     public WebElement errorMsg;
 
 
+   @FindBy(linkText = "Click to load get data via Ajax!")
+   public WebElement ajaxLink;
+
+
+    @FindBy(id = "results")
+    public WebElement resultMsg;
+
+
 
 
 

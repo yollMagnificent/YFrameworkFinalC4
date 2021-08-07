@@ -19,3 +19,10 @@ Feature: My random scenario
     And I press search flights button
     And I verify error message "Select Departure and Arrival airports/cities."
 
+
+  @IND-003
+  Scenario: Verify correct message
+    Given I navigate to the Ajax! webpage
+    When I click on load link
+    And I verify result message "Process completed! This response has been loaded via the Ajax request directly from the web server, without reoading this page."
+
