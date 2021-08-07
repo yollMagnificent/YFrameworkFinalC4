@@ -15,3 +15,8 @@ Feature: Expense
     |Expense date       |
     |Business purpose   |
     |Project name       |
+
+  @MB-006 @WIP
+  Scenario: Adding Expense
+      And I am on the "Expenses" page
+    #And I can expense
