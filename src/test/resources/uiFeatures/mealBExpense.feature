@@ -19,4 +19,5 @@ Feature: Expense
   @MB-006 @WIP
   Scenario: Adding Expense
       And I am on the "Expenses" page
+      And I verify that expense is created
     #And I can expense
