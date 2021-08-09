@@ -1,0 +1,56 @@
+$.store.car[*] --get all elements in car array
+$.store.car[0] --get first element in array
+$.store.car[1].model --get model of 2nd element
+$.store.car[*].model --get all the models in array
+$.store.car[0,2].model --get models of array first and third elements
+$.store.car[1:].model --get all models starting from second element 
+$.store.car[:2].model --gets all models till element index 2 (index2 is not included)
+$.store.car[-1:].model --get last one element in array
+$.store.car[1].model,make --get model and make of 2nd element 
+$.store.car[?(@.year>2010)] --get all elements where is year more than 2010
+$.store.car[?(@.sunroof)] --get all elements which have sunroof
+$.store.car[?(!@.sunroof)] --get all elements which don't have sunroof
+$.store.car[?(@.sunroof && @.make=='Honda')] --gets Honda with sunroof
+$.store.car[?(@.sunroof || @.make=='Honda')] --gets all elements make of Honda or with sunroof
+
+
+
+
+
+
+{
+ "store":{
+	"car":[
+		{
+		"make":"Honda",
+		"model":"Accord",
+		"year":2010,
+		"price":11500
+		},
+		{
+		"make":"Honda",
+		"model":"Civic",
+		"year":2016,
+		"price":18000,
+        "sunroof": true
+		},
+		{
+		"make":"Toyota",
+		"model":"Camry",
+		"year":2019,
+		"price":27000
+		},
+		{
+		"make":"Nissan",
+		"model":"Versa",
+		"year":2005,
+		"price":3200,
+       	"sunroof": "true"
+		}
+	       ],
+	 "bicycle":{
+		"color": "red",
+		"price": 99.99
+		}
+       }
+}

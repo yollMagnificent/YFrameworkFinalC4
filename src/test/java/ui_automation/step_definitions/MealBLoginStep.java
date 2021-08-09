@@ -28,14 +28,15 @@ public class MealBLoginStep {
 
     }
 
-    @Then("I enter username as {string}")
-    public void i_enter_username_as(String userName) {
+    @Then("I enter a valid MealB username")
+    public void i_enter_username_as() {
+        String userName = ConfigurationReader.getProperty("ui-config.properties", "mealb.userName");
         mealBLoginPage.userNameInput.sendKeys(userName);
+   }
 
-    }
-
-    @Then("I enter MealB password as {string}")
-    public void i_enter_MealB_password_as(String password) {
+    @Then("I enter a valid MealB password")
+    public void i_enter_MealB_password_as() {
+        String password = ConfigurationReader.getProperty("ui-config.properties", "mealb.password");
         mealBLoginPage.passwordInput.sendKeys(password);
 
     }

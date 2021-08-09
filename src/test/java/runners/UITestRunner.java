@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         "json:target/cucumber.json"},
         features="src/test/resources/uiFeatures",
         glue="ui_automation.step_definitions",
-        tags="@PR-04",
+        tags="@EX-02",
         dryRun = false,
         monochrome = true
 )
