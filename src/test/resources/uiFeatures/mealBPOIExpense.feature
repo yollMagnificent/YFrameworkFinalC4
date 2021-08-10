@@ -23,3 +23,8 @@ Feature: User validation for MealB Expense feature
   Scenario: Put data into Excel file
     Given I am on Expense tab
     Then I can write to excel file
+
+  @EX-03
+  Scenario: User should be able to verify UI data with DB data
+    Given I am on Expense tab
+    Then User should be able to verify UI data with DB data
