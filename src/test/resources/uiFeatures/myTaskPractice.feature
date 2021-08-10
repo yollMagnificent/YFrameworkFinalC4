@@ -26,3 +26,18 @@ Feature: My random scenario
     When I click on load link
     And I verify result message "Process completed! This response has been loaded via the Ajax request directly from the web server, without reoading this page."
 
+  @HR001
+  Scenario: User should be able to verify message after hover over the image
+    Given USer navigated to herokuapp webpage
+    When user navigates to hovers tab
+    And user hover over images
+    Then user press on view profile button
+    And user verify the message "Not Found"
+
+  @HR002
+  Scenario: User should be able to verify context menu using right click
+    Given USer navigated to herokuapp webpage
+    When user navigates to context menu tab
+    And user right clicks on the target area
+    Then user access alert and verify "You selected a context menu" of alert
+
